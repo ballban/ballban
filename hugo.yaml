@@ -1,4 +1,4 @@
-baseURL: "https://ddddabi.github.io/resume/"
+baseURL: "https://ballban.github.io/resume/"
 title: "Dabin Jung - Resume"
 theme: "hugo-theme-online-resume"
 disableKinds: [taxonomy, term, RSS, sitemap, 404]
