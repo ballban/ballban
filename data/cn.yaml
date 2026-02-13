@@ -1,0 +1,129 @@
+meta:
+  direction: ltr
+  language: cn
+
+basic:
+  name: 郑 多斌
+  title: 高级软件工程师 (.NET / Azure 方向)
+  avatar:
+    show: false
+    path: /images/profile.png
+  pdf:
+    show: true
+    path: /resume.pdf
+    text: 下载简历PDF
+
+contact:
+  location: 东京, 日本
+  email: ballban@hotmail.com
+  linkedin: Linkedin
+  github: Github
+
+profile:
+  show: true
+  order: 1
+  title: 个人简介
+  description: |
+    拥有6年以上开发经验的高级软件工程师，专注于 Microsoft 技术栈 (C#/.NET)。
+    - 扎实的后端基础：在 C#、.NET Framework/.NET Core 和 SQL Server 方面拥有深厚的专业知识，为金融科技和制造业领域交付关键任务系统。
+    - 云原生能力：Microsoft Certified: Azure Developer Associate (AZ-204)，具备扎实的云架构概念理解和无服务器应用程序的实践经验。
+    - 现代 Web 适应能力：在最近的项目中成功从传统的 ASP.NET 转型到现代 Angular/TypeScript 环境，展现出快速学习能力。
+
+experience:
+  show: true
+  order: 2
+  title: 工作经历
+  items:
+    - role: Senior Analyst / Backend Developer
+      company: Avanade Inc.
+      date: "2023年12月 - 至今"
+      location: 东京, 日本
+      tags: 全职
+      description: |
+        - **半导体制造商内部数据分析平台 (2024年11月 - 至今)**: 开发统计数据管理系统，处理和可视化制造生产线的复杂机器数据。快速适应 Angular 框架，实现数据过滤、可视化和报告等关键 UI 组件。实现 C# Web API 和 SQL Server 查询，处理复杂的业务逻辑并确保准确的数据检索。
+        - **企业系统设计与数字化转型项目 (2024年4月 - 2024年10月)**: 负责新 Web 系统的上游设计，替代传统的手工工作流程（基于 Excel），将复杂的业务逻辑转化为功能系统规格。设计数据库架构，解决复杂的数据关系挑战以支持客户的业务流程。定义 RESTful API 规格和系统架构，在客户需求和开发团队之间架起桥梁。管理与离岸开发团队的技术沟通，确保实现严格符合设计标准。
+
+    - role: Software Engineer
+      company: Growth & Communications Inc.
+      date: "2021年10月 - 2023年11月"
+      location: 东京, 日本
+      tags: 全职
+      description: |
+        - **二手车交易平台开发 (2023年1月 - 2023年11月)**: 为专门从事国际出口的日本二手车交易平台设计和开发新页面。使用 ASP.NET、C#、SQL Server 和 Redis 缓存实现响应式新页面和优化功能。使用 Jenkins 配置和管理 CI/CD 管道，实现自动化测试和部署。利用 GCP 进行日志基础设施和系统部署。
+        - **金融投资系统重建 (2022年5月 - 2022年12月)**: 使用 ASP.NET 和 C# 对传统金融报告系统进行现代化改造。通过重构遗留代码库和实现自动化测试脚本来减少技术债务，显著提高了系统可靠性。确保敏感财务记录迁移过程中的数据一致性。
+        - **银行系统 OTP 开发 (2021年10月 - 2022年3月)**: 为主要银行系统开发一次性密码（OTP）身份验证功能。在使用 ASP.NET Web Forms 和 Oracle DB 的高安全环境中工作。严格遵守金融机构所需的安全合规标准。
+
+    - role: Software Engineer
+      company: W2 Solution Co., Ltd.
+      date: "2020年12月 - 2021年9月"
+      location: 东京, 日本
+      tags: 全职
+      description: |
+        - **电子商务产品开发 (2020年12月 - 2021年8月)**: 使用 ASP.NET MVC、C# 和 SQL Server 开发和定制企业电子商务功能，涵盖从设计到部署的完整生命周期。
+
+    - role: Junior Software Engineer
+      company: AVAIL Corporation
+      date: "2019年8月 - 2020年11月"
+      location: 东京, 日本
+      tags: 全职
+      description: |
+        - **服装管理系统开发 (2019年8月 - 2020年11月)**: 使用 VB.NET 和 C# 维护和定制核心业务系统。对数据缺陷进行根本原因分析并优化 SQL 查询。
+
+education:
+  show: true
+  order: 3
+  title: 教育背景
+  items:
+    - degree: Bachelor of Management in Accounting
+      location: 北京, 中国
+      institution: 清华大学
+      date: "2010年9月 - 2015年6月"
+      link: "https://www.tsinghua.edu.cn/"
+
+skill:
+  show: true
+  order: 4
+  title: 技能
+  groups:
+    - name: 核心能力
+      item: ["C#", ".NET Framework", ".NET Core", "Web API", "SQL Server"]
+    - name: Modern Web
+      item: ["TypeScript", "Angular", "JavaScript", "HTML5/CSS3"]
+    - name: Cloud & Tools
+      item: ["Azure", "Azure DevOps", "Git", "GitHub", "CI/CD Pipelines"]
+    - name: 认证
+      item:
+        [
+          "Azure Developer Associate (AZ-204)",
+          "Azure Fundamentals (AZ-900)",
+          "Python 3 Certified Data Analyst Examination (Japan)",
+        ]
+
+certification:
+  show: true
+  order: 5
+  title: 认证证书
+  items:
+    - title: "Azure Developer Associate (AZ-204)"
+      date: "2024"
+    - title: "Azure Fundamentals (AZ-900)"
+      date: "2024"
+    - title: "Python 3 Certified Data Analyst Examination (Japan)"
+      date: "2022"
+
+language:
+  show: true
+  order: 6
+  title: 语言能力
+  items:
+    - idiom: 韩语
+      level: 母语
+    - idiom: 中文
+      level: 母语
+    - idiom: 日语
+      level: 商务熟练 / N1
+    - idiom: 英语
+      level: 日常交流 / TOEIC 855
+
+interest:
+  show: false

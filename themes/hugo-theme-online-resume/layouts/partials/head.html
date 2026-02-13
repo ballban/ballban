@@ -1,0 +1,260 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="{{ if .Site.Params.open }}{{ if .Site.Params.description }}{{ .Site.Params.description }}{{ else }}{{ .Site.Title }}{{ end }}{{ else }}Online Resume{{ end }}"
+/>
+
+{{- if and .Site.Params.open .Site.Params.openGraph.enable }}
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:type" content="profile" />
+<meta
+  property="og:image"
+  content='{{ with .Site.Params.openGraph.image }}{{ if ne (slicestr . 0 1) "/" }}{{ . }}{{ else }}{{ absURL . }}{{ end }}{{ end }}'
+/>
+<meta property="og:url" content="{{ .Permalink }}" />
+{{- if .Site.Params.description }}
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+{{- end }} {{- end }} {{- if .Site.Params.open }}
+<title>{{ .Site.Title | safeHTML }}</title>
+{{- else }}
+<title>Online Resume</title>
+{{- end }} {{- $themeScss := "sass/main.scss" }} {{- $options := (dict "targetPath"
+"assets/css/main.css" "outputStyle" "compressed") }} {{- $themeCss := resources.Get $themeScss |
+resources.ExecuteAsTemplate $themeScss . | toCSS $options | minify | fingerprint }}
+<link
+  rel="stylesheet"
+  href="{{ $themeCss.RelPermalink }}"
+  integrity="{{ $themeCss.Data.Integrity }}"
+/>
+
+<link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css" />
+<link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css" />
+<link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css" />
+<link rel="stylesheet" href="/assets/icons/css/all.css" />
+
+{{- if .Site.Params.analytics.google }}
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.analytics.google }}"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "{{ .Site.Params.analytics.google }}");
+</script>
+{{- end }} {{- if .Site.Params.analytics.cloudflare }}
+<!-- Cloudflare Web Analytics -->
+<script
+  defer
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "{{ .Site.Params.analytics.cloudflare }}"}'
+></script>
+<!-- End Cloudflare Web Analytics -->
+{{- end }} {{ $umami := .Site.Params.analytics.umami }} {{- if $umami.script | and $umami.websiteID
+}}
+<!-- Umami Web Analytics -->
+<script
+  async
+  defer
+  src="{{ $umami.script }}"
+  data-website-id="{{ $umami.websiteID }}"
+  {{
+  if
+  $umami.domains
+  }}
+  data-domains="{{ $umami.domains }}"
+  {{
+  end
+  }}
+></script>
+<!-- End Umami Web Analytics -->
+{{- end }}
+
+<!-- Theme Toggle Styles -->
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--wrapper-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--shadow-color);
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
+  }
+
+  .theme-toggle:active {
+    transform: scale(0.95);
+  }
+
+  @media print {
+    .theme-toggle {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .theme-toggle {
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      top: 15px;
+      right: 15px;
+    }
+  }
+</style>
+
+<!-- Theme Toggle Script -->
+<script>
+  // Initialize theme before page loads to prevent flash
+  (function () {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      // Check system preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const defaultTheme = prefersDark ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", defaultTheme);
+    }
+  })();
+
+  // Theme toggle function
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+
+    // Update icon
+    updateThemeIcon(newTheme);
+  }
+
+  function updateThemeIcon(theme) {
+    const icon = document.querySelector(".theme-toggle i");
+    if (icon) {
+      icon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+    }
+  }
+
+  // Initialize icon on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    updateThemeIcon(currentTheme);
+  });
+
+  // Listen for system theme changes
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    // Only auto-switch if user hasn't manually set a preference
+    if (!localStorage.getItem("theme")) {
+      const newTheme = e.matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      updateThemeIcon(newTheme);
+    }
+  });
+</script>
+
+<!-- html2pdf.js for PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  function downloadResumePDF() {
+    const button = document.querySelector(".pdf-button");
+    const languageSwitcher = document.querySelector(".language-switcher");
+    const themeToggle = document.querySelector(".theme-toggle");
+    const wrapper = document.querySelector(".wrapper");
+
+    // Save original theme
+    const originalTheme = document.documentElement.getAttribute("data-theme");
+
+    // Force light theme for PDF
+    document.documentElement.setAttribute("data-theme", "light");
+
+    // Hide button, language switcher, and theme toggle before generating PDF
+    if (button) button.style.display = "none";
+    if (languageSwitcher) languageSwitcher.style.display = "none";
+    if (themeToggle) themeToggle.style.display = "none";
+
+    // Save original wrapper styles
+    const originalBoxShadow = wrapper.style.boxShadow;
+    const originalMargin = wrapper.style.margin;
+
+    // Save original section title colors
+    const sectionTitles = document.querySelectorAll(".section-title");
+    const originalSectionTitleColors = [];
+    sectionTitles.forEach((title, index) => {
+      originalSectionTitleColors[index] = title.style.color;
+      // Set section title color to a more print-friendly dark blue for better visibility in PDF
+      title.style.color = "#0052a3";
+    });
+
+    // Save original wrapper transform and reduce font size for PDF
+    const originalTransform = wrapper.style.transform;
+    wrapper.style.transform = "scale(0.9)";
+    wrapper.style.transformOrigin = "top left";
+
+    // Adjust for PDF
+    wrapper.style.boxShadow = "none";
+    wrapper.style.margin = "0 0 0 50px";
+
+    const opt = {
+      margin: [0, -9, 0, -9],
+      filename: "resume.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+        letterRendering: true,
+      },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+      pagebreak: { mode: ["css", "legacy"] },
+    };
+
+    html2pdf()
+      .set(opt)
+      .from(wrapper)
+      .save()
+      .then(() => {
+        // Restore original theme
+        document.documentElement.setAttribute("data-theme", originalTheme);
+
+        // Restore original styles
+        wrapper.style.boxShadow = originalBoxShadow;
+        wrapper.style.margin = originalMargin;
+        wrapper.style.transform = originalTransform;
+
+        // Restore original section title colors
+        sectionTitles.forEach((title, index) => {
+          title.style.color = originalSectionTitleColors[index];
+        });
+
+        // Show button, language switcher, and theme toggle again
+        if (button) button.style.display = "inline-block";
+        if (languageSwitcher) languageSwitcher.style.display = "block";
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) themeToggle.style.display = "flex";
+      });
+  }
+</script>

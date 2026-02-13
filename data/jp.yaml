@@ -1,0 +1,129 @@
+meta:
+  direction: ltr
+  language: jp
+
+basic:
+  name: 鄭 多斌（ジョン　ダビン）
+  title: Senior Software Engineer (.NET / Azure Focus)
+  avatar:
+    show: false
+    path: /images/profile.png
+  pdf:
+    show: true
+    path: /resume.pdf
+    text: PDFダウンロード
+
+contact:
+  location: 東京, 日本
+  email: ballban@hotmail.com
+  linkedin: Linkedin
+  github: Github
+
+profile:
+  show: true
+  order: 1
+  title: プロフィール
+  description: |
+    Microsoft 技術スタック（C#/.NET）を専門とする6年以上の経験を持つシニアソフトウェアエンジニア。
+    - 強固なバックエンド基盤：C#、.NET Framework/.NET Core、SQL Serverの深い専門知識を持ち、Fintech と製造業セクターのミッションクリティカルなシステムを提供。
+    - クラウドネイティブ対応：Microsoft Certified: Azure Developer Associate (AZ-204) を取得し、クラウドアーキテクチャの確固たる概念理解とサーバーレスアプリケーションの実践的な経験を保有。
+    - モダン Web への適応：最近のプロジェクトでレガシー ASP.NET からモダンな Angular/TypeScript 環境への移行に成功し、迅速な学習能力を実証。
+
+experience:
+  show: true
+  order: 2
+  title: 職務経歴
+  items:
+    - role: Senior Analyst / Backend Developer
+      company: Avanade Inc.
+      date: "2023年12月 - 現在"
+      location: 東京, 日本
+      tags: 正社員
+      description: |
+        - **半導体メーカー内部データ分析プラットフォーム (2024年11月 - 現在)**: 製造ラインの複雑な機械データを処理・可視化する統計データ管理システムを開発。Angular フレームワークに迅速に適応し、データフィルタリング、可視化、レポーティングの主要な UI コンポーネントを実装。C# Web API と SQL Server クエリを実装し、複雑なビジネスロジックを処理し、正確なデータ取得を保証。
+        - **エンタープライズシステム設計・デジタルトランスフォーメーションプロジェクト (2024年4月 - 2024年10月)**: レガシーな手動ワークフロー（Excel ベース）を置き換える新しい Web ベースシステムの上流設計を主導し、複雑なビジネスロジックを機能的なシステム仕様に変換。データベーススキーマを設計し、クライアントのビジネスプロセスをサポートするための複雑なデータ関係の課題を解決。RESTful API 仕様とシステムアーキテクチャを定義し、クライアント要件と開発チームの橋渡しを実施。オフショア開発チームとの技術コミュニケーションを管理し、設計標準に厳密に沿った実装を確保。
+
+    - role: Software Engineer
+      company: Growth & Communications Inc.
+      date: "2021年10月 - 2023年11月"
+      location: 東京, 日本
+      tags: 正社員
+      description: |
+        - **中古車取引プラットフォーム開発 (2023年1月 - 2023年11月)**: 国際的な車両輸出を専門とする日本の中古車取引プラットフォームの新規ページを設計・開発。ASP.NET、C#、SQL Server、Redis キャッシュを使用してレスポンシブな新規ページと最適化された機能を実装。Jenkins を使用して CI/CD パイプラインを構成・管理し、自動テストとデプロイを実現。GCP をログインフラストラクチャとシステムデプロイに活用。
+        - **金融投資システム再構築 (2022年5月 - 2022年12月)**: ASP.NET と C# を使用してレガシー金融レポートシステムをモダナイズ。レガシーコードベースのリファクタリングと自動テストスクリプトの実装により技術的負債を削減し、システムの信頼性を大幅に向上。機密性の高い財務記録の移行中のデータ整合性を確保。
+        - **銀行システム OTP 開発 (2021年10月 - 2022年3月)**: 主要銀行システムのワンタイムパスワード（OTP）認証機能を開発。ASP.NET Web Forms と Oracle DB を使用した高セキュリティ環境で作業。金融機関に求められるセキュリティコンプライアンス基準を厳格に遵守。
+
+    - role: Software Engineer
+      company: W2 Solution Co., Ltd.
+      date: "2020年12月 - 2021年9月"
+      location: 東京, 日本
+      tags: 正社員
+      description: |
+        - **E コマース製品開発 (2020年12月 - 2021年8月)**: ASP.NET MVC、C#、SQL Server を使用してエンタープライズ E コマース機能を開発・カスタマイズし、設計からデプロイまでの完全なライフサイクルをカバー。
+
+    - role: Junior Software Engineer
+      company: AVAIL Corporation
+      date: "2019年8月 - 2020年11月"
+      location: 東京, 日本
+      tags: 正社員
+      description: |
+        - **アパレル管理システム開発 (2019年8月 - 2020年11月)**: VB.NET と C# を使用してコアビジネスシステムを保守・カスタマイズ。データ不具合の根本原因分析と SQL クエリの最適化を実施。
+
+education:
+  show: true
+  order: 3
+  title: 学歴
+  items:
+    - degree: Bachelor of Management in Accounting
+      location: 北京, 中国
+      institution: 清華大学
+      date: "2010年9月 - 2015年6月"
+      link: "https://www.tsinghua.edu.cn/"
+
+skill:
+  show: true
+  order: 4
+  title: スキル
+  groups:
+    - name: Core Competencies
+      item: ["C#", ".NET Framework", ".NET Core", "Web API", "SQL Server"]
+    - name: Modern Web
+      item: ["TypeScript", "Angular", "JavaScript", "HTML5/CSS3"]
+    - name: Cloud & Tools
+      item: ["Azure", "Azure DevOps", "Git", "GitHub", "CI/CD Pipelines"]
+    - name: 認定資格
+      item:
+        [
+          "Azure Developer Associate (AZ-204)",
+          "Azure Fundamentals (AZ-900)",
+          "Python 3 Certified Data Analyst Examination (Japan)",
+        ]
+
+certification:
+  show: true
+  order: 5
+  title: 認定資格
+  items:
+    - title: "Azure Developer Associate (AZ-204)"
+      date: "2024"
+    - title: "Azure Fundamentals (AZ-900)"
+      date: "2024"
+    - title: "Python 3 Certified Data Analyst Examination (Japan)"
+      date: "2022"
+
+language:
+  show: true
+  order: 6
+  title: 言語
+  items:
+    - idiom: 韓国語
+      level: ネイティブ
+    - idiom: 中国語
+      level: ネイティブ
+    - idiom: 日本語
+      level: ビジネスレベル / N1
+    - idiom: 英語
+      level: 日常会話 / TOEIC 855
+
+interest:
+  show: false

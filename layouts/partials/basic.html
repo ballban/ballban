@@ -1,0 +1,55 @@
+{{- $basic := .data.basic }} {{- if $basic }}
+<section class="basic" style="position: relative">
+  {{- if $basic.avatar.show | and $basic.avatar.path }}
+  <img class="avatar" src="{{ $basic.avatar.path }}" alt="avatar" />
+  {{- end }} {{- if $basic.pdf.show }}
+  <div class="pdf-download" style="position: absolute; top: 10px; left: 10px; z-index: 10">
+    <button
+      onclick="downloadResumePDF()"
+      class="pdf-button"
+      style="
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      "
+      onmouseover="this.style.backgroundColor = '#0056b3'"
+      onmouseout="this.style.backgroundColor = '#007bff'"
+    >
+      <i class="fas fa-download" style="margin-right: 4px; font-size: 0.9em"></i>{{ $basic.pdf.text
+      }}
+    </button>
+  </div>
+  {{- end }}
+
+  <div
+    class="language-switcher no-print"
+    style="position: absolute; top: 0; right: 0; font-size: 0.9em; padding: 10px"
+  >
+    {{- $scratch := newScratch }} {{- range .Site.Home.AllTranslations }} {{- if ne .Language.Lang
+    $.Site.Language.Lang }} {{- $scratch.Add "links" (slice .) }} {{- end }} {{- end }} {{- $links
+    := $scratch.Get "links" }} {{- range $index, $element := $links }}
+    <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit; font-weight: bold"
+      >{{.Language.LanguageName}}</a
+    >
+    {{- if ne (add $index 1) (len $links) }}
+    <span>/</span>
+    {{- end }} {{- end }}
+  </div>
+
+  <div class="header" {{ if ne $basic.avatar.show true }}style="align-items: center;" {{ end }}>
+    {{- if $basic.name }}
+    <h1 class="name">{{ $basic.name }}</h1>
+    {{- if $basic.title }}
+    <h3 class="title">{{ $basic.title }}</h3>
+    {{- end }} {{- end }} {{- partial "contact.html" . }}
+  </div>
+</section>
+{{- end }}

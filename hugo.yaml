@@ -1,0 +1,57 @@
+baseURL: "https://ddddabi.github.io/resume/"
+title: "Dabin Jung - Resume"
+theme: "hugo-theme-online-resume"
+disableKinds: [taxonomy, term, RSS, sitemap, 404]
+
+enableRobotsTXT: true
+
+defaultContentLanguage: "en"
+languages:
+  en:
+    languageName: "EN"
+    weight: 1
+    contentDir: "content/en"
+  jp:
+    languageName: "JA"
+    weight: 2
+    contentDir: "content/jp"
+  kr:
+    languageName: "KR"
+    weight: 3
+    contentDir: "content/kr"
+  cn:
+    languageName: "CN"
+    weight: 4
+    contentDir: "content/cn"
+
+params:
+  # Multilingual support
+  languages:
+    en:
+      menu: English
+    jp:
+      menu: 日本語
+    cn:
+      menu: 中文
+    kr:
+      menu: 한국어
+
+  # Privacy
+  open: true
+  allowSearchEngines: true
+  description: "Software Engineer based in Tokyo"
+  openGraph:
+    enable: false
+
+  # Style
+  dateFormat: "2006.01"
+  themeColor: "#1DA1F2"
+  contactDelimiter: "·"
+  sectionIcon: true
+  sectionTitle: uppercase
+  sectionAlign: start
+  sectionLine: dashed
+  sectionBackground: false
+  skillLevelIcon: star
+  linkIcon: true
+  siteFooter: true

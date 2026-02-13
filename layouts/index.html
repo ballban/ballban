@@ -1,0 +1,3 @@
+{{- define "main" }} {{- $data := index .Site.Data .Site.Language.Lang }} {{- if not $data }} {{-
+$data = .Site.Data.en }} {{- end }} {{- partial "common.html" (dict "Site" .Site "data" $data) }}
+{{- end }}

@@ -1,0 +1,7 @@
+<div class="close">
+  {{- if .data.close }}
+  <div class="description">
+    {{ .data.close | markdownify | safeHTML }}
+  </div>
+  {{- end }}
+</div>
