@@ -12,3 +12,5 @@ resources/_gen/
 *.swp
 *.swo
 *~
+.hugo-review/*
+CONTEXT.md

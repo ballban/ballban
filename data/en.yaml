@@ -4,30 +4,26 @@ meta:
 
 basic:
   name: Dabin Jung
-  title: Senior Software Engineer (.NET / Azure Focus)
+  title: Senior Software Engineer | .NET Backend & Angular
   avatar:
     show: false
     path: /images/profile.png
-  pdf:
-    show: true
-    path: /resume.pdf
-    text: Download PDF
 
 contact:
   location: Tokyo, Japan
   email: ballban@hotmail.com
-  linkedin: Linkedin
-  github: Github
+  linkedin: LinkedIn / Dabin Jung
+  github: GitHub / ballban
 
 profile:
   show: true
   order: 1
   title: Profile
   description: |
-    Senior Software Engineer with 6+ years of experience specializing in the Microsoft technology stack (C#/.NET).
-    - Strong Backend Foundation: Deep expertise in C#, .NET Framework/.NET Core, and SQL Server, delivering mission-critical systems for Fintech and Manufacturing sectors.
-    - Cloud-Native Ready: Microsoft Certified: Azure Developer Associate (AZ-204) with a solid conceptual understanding of cloud architecture and hands-on experience in serverless applications.
-    - Modern Web Adaptation: Successfully transitioned from legacy ASP.NET to modern Angular/TypeScript environments in recent projects, demonstrating rapid learning capabilities.
+    Senior Software Engineer with 6+ years of experience building enterprise web systems with C#/.NET and SQL Server across manufacturing, fintech, and enterprise domains.
+    - Backend-focused engineer experienced in ASP.NET/.NET Core, application service development, database design, and SQL performance tuning.
+    - In recent projects, expanded into Angular/TypeScript development to deliver dashboard and reporting features for enterprise web applications.
+    - Azure-certified engineer with hands-on experience in Azure DevOps workflows and personal Azure-based deployments.
 
 experience:
   show: true
@@ -40,8 +36,16 @@ experience:
       location: Tokyo, Japan
       tags: Permanent
       description: |
-        - **Internal Data Analytics Platform for Semiconductor Manufacturer (Nov 2024 - Present)**: Developing a statistical data management system to process and visualize complex machine data for manufacturing lines. Rapidly adapted to the Angular framework to implement key UI components for data filtering, visualization, and reporting. Implemented C# Web APIs and SQL Server queries to handle complex business logic and ensure accurate data retrieval.
-        - **Enterprise System Design & Digital Transformation Project (Apr 2024 - Oct 2024)**: Led the upstream design for a new web-based system to replace legacy manual workflows (Excel-based), translating complex business logic into functional system specifications. Designed the database schema, solving intricate data relationship challenges to support the client's business processes. Defined RESTful API specifications and system architecture, bridging the gap between client requirements and the development team. Managed technical communication with offshore development teams, ensuring the implementation aligned strictly with the design standards.
+        - **Internal Data Analytics Platform for Semiconductor Manufacturer (Nov 2024 - Present)**
+          - Internal manufacturing analytics platform for data processing, ETL workflows, dashboards, and reporting.
+          - .NET Core, EF Core, Angular, SQL Server
+          - Team of 6 to 20, ~115k LOC, 18 dashboard pages, 44 API endpoints
+          - Built Angular dashboard pages, implemented C# application services, supported ETL and data-processing workflows, and tuned SQL Server queries for aggregation-heavy workloads with indexing and execution plan optimization.
+        - **Enterprise System Design & Digital Transformation Project (Apr 2024 - Oct 2024)**
+          - Web-based system design project that systematized complex client workflows previously handled manually in Excel.
+          - Requirements analysis, system design, database design, application service design, Waterfall methodology
+          - Team of 6 to 20 with offshore development teams; 100+ screens and 50+ database schemas
+          - Led requirements analysis and upstream system design, translating complex client requirements and Excel-based workflows into a practical web system; defined database schemas, application service specifications, and screen designs, and managed delivery progress with offshore development teams.
 
     - role: Software Engineer
       company: Growth & Communications Inc.
@@ -49,9 +53,21 @@ experience:
       location: Tokyo, Japan
       tags: Permanent
       description: |
-        - **Used Car Trading Platform Development (Jan 2023 - Nov 2023)**: Designed and developed new pages for a Japanese used car trading platform specializing in exporting vehicles internationally. Implemented responsive new pages and optimized features using ASP.NET, C#, SQL Server, and Redis for caching. Configured and managed CI/CD pipelines using Jenkins for automated testing and deployment. Utilized GCP for logging infrastructure and system deployment.
-        - **Financial Investment System Rebuild (May 2022 - Dec 2022)**: Modernized legacy financial reporting system using ASP.NET and C#. Reduced technical debt by refactoring legacy codebases and implementing automated testing scripts, significantly improving system reliability. Ensured data consistency during migration of sensitive financial records.
-        - **Banking System OTP Development (Oct 2021 - Mar 2022)**: Developed One-Time Password (OTP) authentication features for major banking system. Worked in high-security environment utilizing ASP.NET Web Forms and Oracle DB. Strictly adhered to security compliance standards required for financial institutions.
+        - **Used Car Trading & Export Platform Development & Maintenance (Jan 2023 - Nov 2023)**:
+          - Developed new features for and maintained a legacy web platform that had been in production for over 10 years.
+          - ASP.NET, .NET Framework, SQL Server, Redis, Jenkins, GCP
+          - Team of 5; long-running production platform with 1M+ registered users
+          - Designed and developed new pages, optimized features, and managed automated testing and deployment workflows.
+        - **Financial Investment Analysis System Backend Rebuild (May 2022 - Dec 2022)**:
+          - Rebuild project for a legacy financial investment information backend system.
+          - ASP.NET, .NET Framework, SQL Server, VBA, GAS
+          - Team of 3; 20+ API endpoints
+          - Migrated and rebuilt existing features, and created automated test tools using C# and Google Apps Script to support testing and reduce manual validation work.
+        - **Banking System OTP Development (Oct 2021 - Mar 2022)**:
+          - OTP authentication feature development for a major banking system.
+          - ASP.NET, .NET Framework, JavaScript, Oracle DB
+          - Team of 5; 5 screens
+          - Developed OTP authentication features and delivered changes in a security-sensitive environment under strict banking security and quality standards.
 
     - role: Software Engineer
       company: W2 Solution Co., Ltd.
@@ -59,7 +75,11 @@ experience:
       location: Tokyo, Japan
       tags: Permanent
       description: |
-        - **E-Commerce Product Development (Dec 2020 - Aug 2021)**: Developed and customized enterprise E-Commerce features using ASP.NET MVC, C#, and SQL Server, covering the full lifecycle from design to deployment.
+        - **E-Commerce Product Development (Dec 2020 - Aug 2021)**:
+          - Proprietary e-commerce platform for launching online stores, offered as both a standard product and client-specific customized editions.
+          - ASP.NET, C#, .NET Framework, SQL Server
+          - Customized product team of 3; standard product team of 20; 20+ client-specific customized editions
+          - Primarily developed new features and bug fixes for customized client editions, while also contributing to feature development and maintenance of the standard product.
 
     - role: Junior Software Engineer
       company: AVAIL Corporation
@@ -67,7 +87,11 @@ experience:
       location: Tokyo, Japan
       tags: Permanent
       description: |
-        - **Apparel Management System Development (Aug 2019 - Nov 2020)**: Maintained and customized core business systems using VB.NET and C#. Conducted root cause analysis for data defects and optimized SQL queries.
+        - **Apparel Management System Development (Aug 2019 - Nov 2020)**:
+          - Maintenance and customization of core business systems for apparel operations.
+          - VB.NET, C#, SQL
+          - Team of 2
+          - Conducted root cause analysis for data defects and optimized SQL queries to improve system stability and maintainability.
 
 education:
   show: true
@@ -85,19 +109,14 @@ skill:
   order: 4
   title: Skills
   groups:
-    - name: Core Competencies
-      item: ["C#", ".NET Framework", ".NET Core", "Web API", "SQL Server"]
-    - name: Modern Web
-      item: ["TypeScript", "Angular", "JavaScript", "HTML5/CSS3"]
-    - name: Cloud & Tools
-      item: ["Azure", "Azure DevOps", "Git", "GitHub", "CI/CD Pipelines"]
-    - name: Certifications
-      item:
-        [
-          "Azure Developer Associate (AZ-204)",
-          "Azure Fundamentals (AZ-900)",
-          "Python 3 Certified Data Analyst Examination (Japan)",
-        ]
+    - name: Backend
+      item: ["C#", ".NET Framework", ".NET Core", "Application Services", "ASP.NET", "VB.NET"]
+    - name: Frontend
+      item: ["Angular", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+    - name: Databases & Caching
+      item: ["SQL Server", "Oracle", "Redis"]
+    - name: Cloud & DevOps
+      item: ["Azure", "Azure DevOps", "GCP", "Jenkins", "GitHub Actions", "CI/CD"]
 
 certification:
   show: true
@@ -123,4 +142,4 @@ language:
     - idiom: Japanese
       level: Professional Working / N1
     - idiom: English
-      level: Conversational / TOEIC 855
+      level: Working Proficiency / TOEIC 855

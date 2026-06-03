@@ -68,9 +68,7 @@ small {
   max-width: $content-width;
   margin: $spacing-unit auto;
   padding: $spacing-unit * 2;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: none;
 
   section {
     &:not(:last-child) {
@@ -247,6 +245,16 @@ small {
 
         .item {
           flex-basis: 45%;
+        }
+      }
+    }
+  }
+
+  .certificate {
+    .section-content {
+      .items {
+        .item {
+          flex-basis: 100%;
         }
       }
     }

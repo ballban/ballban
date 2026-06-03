@@ -58,14 +58,7 @@ $wrapper-color: var(--wrapper-color);
 $heart-color: var(--heart-color);
 $theme-color: var(--theme-color);
 
-@import "sanitize", "base", "responsive", "print", "fonts";
-
-// Override wrapper box-shadow to use CSS variables
-.wrapper {
-  box-shadow:
-    var(--shadow-color) 0px 10px 15px -3px,
-    var(--shadow-color-secondary) 0px 4px 6px -2px !important;
-}
+@import "sanitize", "base", "responsive", "fonts";
 
 // Ensure smooth transitions between themes
 body,
@@ -102,6 +95,31 @@ a {
   text-decoration: underline !important;
 }
 
+@media print {
+  html,
+  body,
+  body * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  .wrapper,
+  section,
+  .section-title,
+  .section-content,
+  .item,
+  .group {
+    background: var(--wrapper-color) !important;
+    color: inherit !important;
+  }
+}
+
 // Experience Section Enhancements
 .experience,
 .education {
@@ -125,6 +143,14 @@ a {
           font-size: 1.1em;
         }
       }
+    }
+  }
+}
+
+.experience {
+  .description {
+    ul ul > li::marker {
+      content: "\25B8  ";
     }
   }
 }

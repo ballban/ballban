@@ -4,77 +4,101 @@ meta:
 
 basic:
   name: 정 다빈
-  title: Senior Software Engineer (.NET / Azure Focus)
+  title: 시니어 소프트웨어 엔지니어 | .NET 백엔드 & Angular
   avatar:
     show: false
     path: /images/profile.png
-  pdf:
-    show: true
-    path: /resume.pdf
-    text: PDF 다운로드
 
 contact:
   location: 도쿄, 일본
   email: ballban@hotmail.com
-  linkedin: Linkedin
-  github: Github
+  linkedin: LinkedIn / Dabin Jung
+  github: GitHub / ballban
 
 profile:
   show: true
   order: 1
   title: 프로필
   description: |
-    Microsoft 기술 스택(C#/.NET) 전문 6년 이상 경력의 시니어 소프트웨어 엔지니어.
-    - 탄탄한 백엔드 기반: C#, .NET Framework/.NET Core, SQL Server에 대한 깊은 전문 지식을 보유하고 있으며, Fintech 및 제조업 분야의 미션 크리티컬 시스템을 제공.
-    - 클라우드 네이티브 준비: Microsoft Certified: Azure Developer Associate (AZ-204)를 취득하여 클라우드 아키텍처에 대한 확고한 개념적 이해와 서버리스 애플리케이션에 대한 실무 경험 보유.
-    - 모던 웹 적응: 최근 프로젝트에서 레거시 ASP.NET에서 모던 Angular/TypeScript 환경으로 성공적으로 전환하여 빠른 학습 능력을 입증.
+    제조, 핀테크, 엔터프라이즈 도메인에서 C#/.NET과 SQL Server로 업무용 웹 시스템을 구축해 온 6년 이상의 경력을 가진 시니어 소프트웨어 엔지니어.
+    - ASP.NET/.NET Core, 애플리케이션 서비스 개발, 데이터베이스 설계, SQL 성능 튜닝에 강한 백엔드 중심 엔지니어.
+    - 최근 프로젝트에서는 Angular/TypeScript 개발까지 영역을 확장하여 엔터프라이즈 웹 애플리케이션용 대시보드 및 리포트 기능을 구현.
+    - Azure 자격증을 보유하고 있으며 Azure DevOps 워크플로우와 개인 Azure 기반 배포 경험을 갖추고 있음.
 
 experience:
   show: true
   order: 2
   title: 경력
   items:
-    - role: Senior Analyst / Backend Developer
+    - role: 시니어 애널리스트 / 백엔드 개발자
       company: Avanade Inc.
       date: "2023년 12월 - 현재"
       location: 도쿄, 일본
       tags: 정규직
       description: |
-        - **반도체 제조사 내부 데이터 분석 플랫폼 (2024년 11월 - 현재)**: 제조 라인의 복잡한 기계 데이터를 처리하고 시각화하는 통계 데이터 관리 시스템 개발. Angular 프레임워크에 빠르게 적응하여 데이터 필터링, 시각화 및 리포팅을 위한 핵심 UI 컴포넌트를 구현. C# Web API와 SQL Server 쿼리를 구현하여 복잡한 비즈니스 로직을 처리하고 정확한 데이터 검색을 보장.
-        - **엔터프라이즈 시스템 설계 및 디지털 트랜스포메이션 프로젝트 (2024년 4월 - 2024년 10월)**: 레거시 수동 워크플로우(Excel 기반)를 대체할 새로운 웹 기반 시스템의 상위 설계를 주도하여 복잡한 비즈니스 로직을 기능적 시스템 사양으로 변환. 데이터베이스 스키마를 설계하고 클라이언트의 비즈니스 프로세스를 지원하기 위한 복잡한 데이터 관계 문제를 해결. RESTful API 사양 및 시스템 아키텍처를 정의하여 클라이언트 요구사항과 개발팀 간의 가교 역할 수행. 오프쇼어 개발팀과의 기술 커뮤니케이션을 관리하여 설계 표준에 엄격히 부합하는 구현을 보장.
+        - **반도체 제조사 내부 데이터 분석 플랫폼 (2024년 11월 - 현재)**
+          - 데이터 처리, ETL 워크플로우, 대시보드, 리포팅을 담당하는 제조 분석용 내부 플랫폼.
+          - .NET Core, EF Core, Angular, SQL Server
+          - 팀 규모 6~20명, 약 11.5만 LOC, 대시보드 18개 페이지, API 44개
+          - Angular로 대시보드 화면을 구축하고 C# 애플리케이션 서비스를 구현. ETL 및 데이터 처리 워크플로우를 지원하면서 인덱싱과 실행 계획 최적화를 통해 SQL Server의 집계 중심 쿼리 성능을 튜닝.
+        - **엔터프라이즈 시스템 설계 및 디지털 트랜스포메이션 프로젝트 (2024년 4월 - 2024년 10월)**
+          - 기존에 Excel로 수작업 처리하던 복잡한 고객 업무 흐름을 웹 시스템으로 전환한 상위 설계 프로젝트.
+          - 요구사항 분석, 시스템 설계, 데이터베이스 설계, 애플리케이션 서비스 설계, 워터폴 개발
+          - 팀 규모 6~20명, 오프쇼어 개발팀과 협업, 화면 100개 이상, 데이터베이스 스키마 50개 이상
+          - 복잡한 고객 요구사항과 Excel 기반 업무 흐름을 실용적인 웹 시스템으로 전환하도록 요구사항 분석과 상위 설계를 주도. DB 스키마, 애플리케이션 서비스 명세, 화면 설계를 정의하고 오프쇼어 개발팀의 전달 일정도 관리.
 
-    - role: Software Engineer
+    - role: 소프트웨어 엔지니어
       company: Growth & Communications Inc.
       date: "2021년 10월 - 2023년 11월"
       location: 도쿄, 일본
       tags: 정규직
       description: |
-        - **중고차 거래 플랫폼 개발 (2023년 1월 - 2023년 11월)**: 국제 차량 수출을 전문으로 하는 일본 중고차 거래 플랫폼의 신규 페이지를 설계 및 개발. ASP.NET, C#, SQL Server 및 캐싱을 위한 Redis를 사용하여 반응형 신규 페이지와 최적화된 기능을 구현. Jenkins를 사용하여 CI/CD 파이프라인을 구성 및 관리하여 자동화된 테스트 및 배포를 실현. GCP를 로깅 인프라 및 시스템 배포에 활용.
-        - **금융 투자 시스템 재구축 (2022년 5월 - 2022년 12월)**: ASP.NET과 C#을 사용하여 레거시 금융 리포팅 시스템을 현대화. 레거시 코드베이스를 리팩토링하고 자동화된 테스트 스크립트를 구현하여 기술 부채를 줄이고 시스템 신뢰성을 크게 향상. 민감한 금융 기록의 마이그레이션 중 데이터 일관성을 보장.
-        - **은행 시스템 OTP 개발 (2021년 10월 - 2022년 3월)**: 주요 은행 시스템의 일회용 비밀번호(OTP) 인증 기능을 개발. ASP.NET Web Forms 및 Oracle DB를 사용하는 높은 보안 환경에서 작업. 금융 기관에 요구되는 보안 규정 표준을 엄격히 준수.
+        - **중고차 거래 및 수출 플랫폼 개발·유지보수 (2023년 1월 - 2023년 11월)**:
+          - 10년 이상 운영되어 온 레거시 웹 플랫폼의 신규 기능 개발과 유지보수를 담당.
+          - ASP.NET, .NET Framework, SQL Server, Redis, Jenkins, GCP
+          - 5명 팀, 100만 명 이상의 등록 사용자를 보유한 장기 운영 서비스
+          - 신규 페이지 설계 및 개발, 기존 기능 개선, 자동화 테스트와 배포 워크플로우 운영을 담당.
+        - **금융 투자 분석 시스템 백엔드 재구축 (2022년 5월 - 2022년 12월)**:
+          - 레거시 금융 투자 정보 백엔드 시스템 재구축 프로젝트.
+          - ASP.NET, .NET Framework, SQL Server, VBA, GAS
+          - 3명 팀, API 20개 이상
+          - 기존 기능을 이관 및 재구축했고, C#과 Google Apps Script로 자동화 테스트 도구를 만들어 테스트 지원과 수동 검증 작업 감소에 기여.
+        - **은행 시스템 OTP 개발 (2021년 10월 - 2022년 3월)**:
+          - 대형 은행 시스템의 OTP 인증 기능 개발.
+          - ASP.NET, .NET Framework, JavaScript, Oracle DB
+          - 5명 팀, 5개 화면
+          - 보안 요구가 엄격한 은행 환경에서 OTP 인증 기능을 개발하고, 엄격한 보안 및 품질 기준 아래 변경 사항을 제공.
 
-    - role: Software Engineer
+    - role: 소프트웨어 엔지니어
       company: W2 Solution Co., Ltd.
       date: "2020년 12월 - 2021년 9월"
       location: 도쿄, 일본
       tags: 정규직
       description: |
-        - **전자상거래 제품 개발 (2020년 12월 - 2021년 8월)**: ASP.NET MVC, C# 및 SQL Server를 사용하여 기업용 전자상거래 기능을 개발 및 커스터마이징하여 설계부터 배포까지의 전체 라이프사이클을 커버.
+        - **전자상거래 제품 개발 (2020년 12월 - 2021년 8월)**:
+          - 온라인 스토어 구축을 위한 자체 전자상거래 플랫폼으로, 표준 제품과 고객별 커스터마이징 버전을 함께 제공.
+          - ASP.NET, C#, .NET Framework, SQL Server
+          - 커스터마이징 제품 팀 3명, 표준 제품 팀 20명, 고객별 커스터마이징 버전 20개 이상
+          - 주로 고객 맞춤형 버전의 신규 기능 개발과 버그 수정을 담당했고, 표준 제품의 기능 개발 및 유지보수에도 참여.
 
-    - role: Junior Software Engineer
+    - role: 주니어 소프트웨어 엔지니어
       company: AVAIL Corporation
       date: "2019년 8월 - 2020년 11월"
       location: 도쿄, 일본
       tags: 정규직
       description: |
-        - **의류 관리 시스템 개발 (2019년 8월 - 2020년 11월)**: VB.NET 및 C#을 사용하여 핵심 비즈니스 시스템을 유지보수 및 커스터마이징. 데이터 결함에 대한 근본 원인 분석을 수행하고 SQL 쿼리를 최적화.
+        - **의류 관리 시스템 개발 (2019년 8월 - 2020년 11월)**:
+          - 의류 업무용 핵심 시스템 유지보수 및 커스터마이징.
+          - VB.NET, C#, SQL
+          - 2명 팀
+          - 데이터 결함의 근본 원인을 분석하고 SQL 쿼리를 최적화하여 시스템 안정성과 유지보수성을 개선.
 
 education:
   show: true
   order: 3
   title: 학력
   items:
-    - degree: Bachelor of Management in Accounting
+    - degree: 회계학 전공 경영학 학사
       location: 베이징, 중국
       institution: 칭화대학교
       date: "2010년 9월 - 2015년 6월"
@@ -85,19 +109,14 @@ skill:
   order: 4
   title: 기술
   groups:
-    - name: Core Competencies
-      item: ["C#", ".NET Framework", ".NET Core", "Web API", "SQL Server"]
-    - name: Modern Web
-      item: ["TypeScript", "Angular", "JavaScript", "HTML5/CSS3"]
-    - name: Cloud & Tools
-      item: ["Azure", "Azure DevOps", "Git", "GitHub", "CI/CD Pipelines"]
-    - name: 자격증
-      item:
-        [
-          "Azure Developer Associate (AZ-204)",
-          "Azure Fundamentals (AZ-900)",
-          "Python 3 Certified Data Analyst Examination (Japan)",
-        ]
+    - name: 백엔드
+      item: ["C#", ".NET Framework", ".NET Core", "애플리케이션 서비스", "ASP.NET", "VB.NET"]
+    - name: 프론트엔드
+      item: ["Angular", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+    - name: 데이터베이스 및 캐시
+      item: ["SQL Server", "Oracle", "Redis"]
+    - name: 클라우드 및 DevOps
+      item: ["Azure", "Azure DevOps", "GCP", "Jenkins", "GitHub Actions", "CI/CD"]
 
 certification:
   show: true
@@ -123,7 +142,7 @@ language:
     - idiom: 일본어
       level: 비즈니스 수준 / N1
     - idiom: 영어
-      level: 일상 회화 / TOEIC 855
+      level: 실무 활용 가능 / TOEIC 855
 
 interest:
   show: false
