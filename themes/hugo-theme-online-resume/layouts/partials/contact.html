@@ -61,11 +61,11 @@
     <i class="fa-solid fa-car"></i>
     <span>{{ $text }}</span>
   </div>
-  {{- end }} {{- if $contact.github }} {{- $text := $contact.github }} {{- $link :=
-  "https://github.com/ballban" }}
+  {{- end }} {{- if $contact.github }} {{- $text := $contact.github }} {{- $link := (print
+  "https://github.com/" $text) }}
   <div class="contact-item" title="GitHub">
     <i class="fa-brands fa-github"></i>
-    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">GitHub / {{ $text }}</a>
   </div>
   {{- end }} {{- if $contact.gitlab }} {{- $text := $contact.gitlab }} {{- $link := (print
   "https://gitlab.com/" $text) }}
@@ -223,11 +223,11 @@
     <i class="fa-brands fa-product-hunt"></i>
     <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
   </div>
-  {{- end }} {{- if $contact.linkedin }} {{- $text := $contact.linkedin }} {{- $link :=
-  "https://www.linkedin.com/in/jungdabin/" }}
+  {{- end }} {{- if $contact.linkedin }} {{- $text := $contact.linkedin }} {{- $link := (print
+  "https://www.linkedin.com/in/" $text) }}
   <div class="contact-item" title="LinkedIn">
     <i class="fa-brands fa-linkedin"></i>
-    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">LinkedIn / {{ $text }}</a>
   </div>
   {{- end }} {{- if $contact.indeed }} {{- $text := $contact.indeed }} {{- $link := (print
   "https://my.indeed.com/p/" $text) }}

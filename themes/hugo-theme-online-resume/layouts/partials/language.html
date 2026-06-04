@@ -1,5 +1,4 @@
-{{- $language := .data.language }}
-{{- if $language | and $language.show }}
+{{- $language := .data.language }} {{- if $language | and $language.show }}
 <section class="language" style="order: {{ $language.order | default 1 }}">
   <div class="section-title">
     <i class="section-icon fa-solid fa-earth-americas"></i>
@@ -8,19 +7,21 @@
 
   <div class="section-content">
     {{- if $language.description }}
-    <div class="description markdown">
-      {{ $language.description | markdownify | safeHTML }}
-    </div>
-    {{- end }}
-
-    {{- if $language.items }}
+    <div class="description markdown">{{ $language.description | markdownify | safeHTML }}</div>
+    {{- end }} {{- if $language.items }}
     <div class="items">
       {{- range $item := $language.items }}
       <div class="item">
-        <span>{{ $item.idiom }}</span>
-        {{- if $item.level }}
-        <small>[{{ $item.level }}]</small>
-        {{- end }}
+        <div class="row">
+          <div class="language-name">
+            <span>{{ $item.idiom }}</span>
+          </div>
+          {{- if $item.level }}
+          <div class="date">
+            <span>{{ $item.level }}</span>
+          </div>
+          {{- end }}
+        </div>
       </div>
       {{- end }}
     </div>

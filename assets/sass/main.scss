@@ -28,12 +28,9 @@ $contact-delimiter: "·";
   --text-color: #333333;
   --text-second-color: #3f4650;
   --text-third-color: #97aac3;
-  --background-color: #f5f5f5;
-  --wrapper-color: #ffffff;
+  --background-color: #ffffff;
   --heart-color: #fb866a;
   --theme-color: #1da1f2;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-color-secondary: rgba(0, 0, 0, 0.05);
 }
 
 // Dark mode colors
@@ -42,11 +39,8 @@ $contact-delimiter: "·";
   --text-second-color: #cccccc;
   --text-third-color: #999999;
   --background-color: #181818;
-  --wrapper-color: #242424;
   --heart-color: #fb866a;
   --theme-color: #1da1f2;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --shadow-color-secondary: rgba(0, 0, 0, 0.2);
 }
 
 // Use variables in SCSS
@@ -54,11 +48,422 @@ $text-color: var(--text-color);
 $text-second-color: var(--text-second-color);
 $text-third-color: var(--text-third-color);
 $background-color: var(--background-color);
-$wrapper-color: var(--wrapper-color);
 $heart-color: var(--heart-color);
 $theme-color: var(--theme-color);
 
-@import "sanitize", "base", "responsive", "fonts";
+@import "sanitize";
+
+// ─── Base ─────────────────────────────────────────────────────────────────────
+
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: $text-color;
+  text-decoration: underline;
+}
+
+p {
+  line-height: $base-line-height;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+ol,
+ul {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+b,
+strong {
+  font-weight: $base-font-weight * 1.5;
+}
+
+small {
+  font-weight: $base-font-weight;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: $spacing-unit * 2;
+
+  section {
+    &:not(:last-child) {
+      margin-bottom: $spacing-unit * 1.5;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      text-transform: uppercase;
+      justify-content: start;
+
+      font-size: $large-font-size;
+      color: $theme-color;
+      margin-bottom: $spacing-unit / 2;
+      padding: $spacing-unit / 10 0;
+      border-bottom: 1px dashed var(--theme-color);
+
+      i::after {
+        content: "\00a0";
+        font-family: initial;
+      }
+
+      h2 {
+        font-size: inherit;
+        margin-bottom: 0;
+      }
+    }
+
+    .section-content {
+      .description {
+        margin-bottom: $spacing-unit / 2;
+      }
+
+      .markdown,
+      .items {
+        a::after {
+          display: none;
+        }
+      }
+
+      .items {
+        .item {
+          margin-bottom: 0;
+
+          .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+          .description {
+            margin-bottom: 0;
+          }
+        }
+
+        .divider {
+          height: 0;
+          border: none;
+          border-top: 1px dashed #7e7e7e;
+          margin: calc(-#{$spacing-unit / 2}) auto calc(-#{$spacing-unit / 4}) auto;
+          width: 95%;
+          position: relative;
+          top: -12px;
+        }
+      }
+
+      .groups {
+        margin-bottom: $spacing-unit / 2;
+      }
+
+      .location,
+      .degree {
+        display: inline-flex;
+        align-items: baseline;
+
+        i::after {
+          content: "\00a0";
+          font-family: initial;
+        }
+      }
+
+      .company,
+      .project-name {
+        display: inline-flex;
+        align-items: baseline;
+
+        small::before {
+          content: "\00a0";
+          font-family: initial;
+        }
+      }
+
+      .company,
+      .project-name,
+      .institution,
+      .language-name,
+      .certificate-name,
+      .publication-title,
+      .award-name,
+      .reference-name {
+        font-weight: $base-font-weight * 1.5;
+      }
+
+      .role,
+      .major,
+      .issuer,
+      .authors,
+      .awarder,
+      .reference-title {
+        font-style: italic;
+      }
+
+      .date,
+      .location,
+      .degree {
+        color: $text-third-color;
+      }
+    }
+  }
+
+  .basic {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .avatar {
+      max-height: 100px;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      .name {
+        font-size: $huge-font-size;
+        margin-top: 0;
+        margin-bottom: $spacing-unit / 4;
+      }
+
+      .title {
+        color: $text-second-color;
+        font-size: $middle-font-size;
+        font-weight: $base-font-weight;
+        margin-top: 0;
+        margin-bottom: $spacing-unit / 4;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+
+        .contact-item {
+          display: inline-flex;
+          align-items: baseline;
+
+          &:not(:last-child)::after {
+            content: $contact-delimiter;
+            color: $text-third-color;
+            margin: 0 0.5em;
+          }
+
+          i::after {
+            content: "\00a0";
+            font-family: initial;
+          }
+        }
+      }
+    }
+  }
+
+  .certificate,
+  .award,
+  .reference {
+    .section-content {
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .item {
+          flex-basis: 45%;
+        }
+      }
+    }
+  }
+
+  .certificate {
+    .section-content {
+      .items {
+        .item {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+
+  .language {
+    .section-content {
+      .items {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .interest {
+    .section-content {
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+          display: flex;
+          align-items: baseline;
+
+          &:not(:last-child)::after {
+            content: "/";
+            color: $text-third-color;
+            margin: 0 0.5em;
+          }
+
+          small::before {
+            content: "\00a0";
+            font-family: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-bottom: $spacing-unit;
+  color: $text-second-color;
+  width: 100%;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: $small-font-size;
+
+  i {
+    color: $heart-color;
+    padding: 0 $spacing-unit / 4;
+  }
+}
+
+.close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .description {
+    margin: $spacing-unit 0;
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+
+  .wrapper {
+    margin: 0;
+    padding: $spacing-unit / 2;
+    box-shadow: none;
+
+    section {
+      .section-content {
+        .items {
+          flex-direction: column;
+
+          .item {
+            .row {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+
+    .basic {
+      flex-direction: column;
+
+      .avatar {
+        display: block;
+        margin: $spacing-unit auto;
+        border-radius: 100%;
+      }
+
+      .header {
+        text-align: center;
+
+        .contact {
+          flex-direction: column;
+          width: 100%;
+
+          .contact-item:not(:last-child)::after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .certificate,
+    .award,
+    .reference {
+      .section-content {
+        .items {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .skill {
+      .section-content {
+        .items {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .language,
+    .interest {
+      .section-content {
+        .items {
+          flex-direction: column;
+
+          .item:not(:last-child)::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Ensure smooth transitions between themes
 body,
@@ -73,29 +478,49 @@ section,
     box-shadow 0.3s ease;
 }
 
-section {
-  .section-title {
-    text-transform: uppercase;
-    justify-content: start;
-    border-bottom-style: dashed;
-  }
-
+// Skill tag-list layout
+.skill {
   .section-content {
-    .markdown,
     .items {
-      a::after {
-        display: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin: 0;
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-basis: 100%;
+
+        .skill-name {
+          font-weight: $base-font-weight * 1.5;
+          flex: 0 0 auto;
+        }
+
+        .skill-tags {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: end;
+          flex: 1;
+
+          span:not(:last-child)::after {
+            content: "/";
+            color: $text-third-color;
+            margin: 0 0.5em;
+          }
+        }
       }
     }
   }
 }
 
-// Override link decoration
-a {
-  text-decoration: underline !important;
-}
-
 @media print {
+  .no-print {
+    display: none !important;
+  }
+
   html,
   body,
   body * {
@@ -103,20 +528,21 @@ a {
     print-color-adjust: exact;
   }
 
-  html,
   body {
-    background: var(--background-color) !important;
-    color: var(--text-color) !important;
+    padding: 0;
   }
 
-  .wrapper,
-  section,
-  .section-title,
-  .section-content,
-  .item,
-  .group {
-    background: var(--wrapper-color) !important;
-    color: inherit !important;
+  .footer {
+    display: none !important;
+  }
+
+  .experience-intro-block,
+  .experience .entry,
+  section:not(.basic):not(.experience),
+  section:not(.basic):not(.experience) .item,
+  section:not(.basic):not(.experience) .group {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
   }
 }
 
@@ -125,12 +551,10 @@ a {
 .education {
   .items {
     .item {
-      padding-bottom: $spacing-unit; // Add padding at bottom
-      margin-bottom: $spacing-unit; // Add margin
-      border-bottom: 1px dashed rgba($text-third-color, 0.5); // Add separator
+      padding-bottom: $spacing-unit;
+      margin-bottom: $spacing-unit;
 
       &:last-child {
-        border-bottom: none; // Remove border for last item
         padding-bottom: 0;
         margin-bottom: 0;
       }

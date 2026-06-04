@@ -1,6 +1,6 @@
 meta:
   direction: ltr
-  language: kr
+  language: ko
 
 basic:
   name: 정 다빈
@@ -12,8 +12,8 @@ basic:
 contact:
   location: 도쿄, 일본
   email: ballban@hotmail.com
-  linkedin: LinkedIn / Dabin Jung
-  github: GitHub / ballban
+  linkedin: jungdabin
+  github: ballban
 
 profile:
   show: true
@@ -108,7 +108,7 @@ skill:
   show: true
   order: 4
   title: 기술
-  groups:
+  items:
     - name: 백엔드
       item: ["C#", ".NET Framework", ".NET Core", "애플리케이션 서비스", "ASP.NET", "VB.NET"]
     - name: 프론트엔드

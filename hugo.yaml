@@ -29,17 +29,6 @@ languages:
     contentDir: "content/cn"
 
 params:
-  # Multilingual support
-  languages:
-    en:
-      menu: English
-    jp:
-      menu: 日本語
-    cn:
-      menu: 中文
-    kr:
-      menu: 한국어
-
   # Privacy
   open: true
   allowSearchEngines: true

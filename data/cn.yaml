@@ -1,6 +1,6 @@
 meta:
   direction: ltr
-  language: cn
+  language: zh
 
 basic:
   name: 郑 多斌
@@ -12,8 +12,8 @@ basic:
 contact:
   location: 东京, 日本
   email: ballban@hotmail.com
-  linkedin: LinkedIn / Dabin Jung
-  github: GitHub / ballban
+  linkedin: jungdabin
+  github: ballban
 
 profile:
   show: true
@@ -108,7 +108,7 @@ skill:
   show: true
   order: 4
   title: 技能
-  groups:
+  items:
     - name: 后端
       item: ["C#", ".NET Framework", ".NET Core", "应用服务", "ASP.NET", "VB.NET"]
     - name: 前端
